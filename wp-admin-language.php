@@ -3,10 +3,13 @@
 
 /*
 Plugin Name: wp admin language
-Plugin URI: https://devloma.com/
+Plugin URI: http://devloma.com/
 Description: datac - sabeel user and driver app API for mobile 
 Author: SAM
-Author URI: https://devloma.com/
+Author URI: https://devloma.com/sam
+
+ License:     GPL v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
 Version: 1.0
  */
