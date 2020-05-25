@@ -35,14 +35,14 @@ require plugin_dir_path(__FILE__) . 'inc/core.class.php';
      add_action('admin_bar_menu', 'create_lang_menu', 2000);
    
 
-
+     add_action ('wp_loaded' , 'set_language');
      function set_language(){
          if(isset($_GET['local'])){
             $lang = $_GET['local'];
             if(in_array($lang ,  Wp_language_core::avilable_lang())){
                 $user_ID= get_current_user_id();  
                 // echo $user_ID."_____";die();
-                update_usermeta($user_ID , 'locale' , $lang);
+                update_user_meta($user_ID , 'locale' , $lang);
                 $params = $_GET;
                 unset( $params['local'] );
                 $new_query_string = http_build_query( $params );
