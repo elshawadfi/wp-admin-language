@@ -7,7 +7,6 @@ Plugin URI: http://devloma.com/
 Description: datac - sabeel user and driver app API for mobile 
 Author: SAM
 Author URI: https://devloma.com/sam
-
  License:     GPL v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -39,7 +38,7 @@ require plugin_dir_path(__FILE__) . 'inc/core.class.php';
      function set_language(){
          if(isset($_GET['local'])){
             $lang = $_GET['local'];
-            if(in_array($lang ,  Wp_language_core::avilable_lang())){
+            if(in_array($lang ,  Wp_language_core::avilable_lang())){ //check if in array lang
                 $user_ID= get_current_user_id();  
                 // echo $user_ID."_____";die();
                 update_user_meta($user_ID , 'locale' , $lang);
